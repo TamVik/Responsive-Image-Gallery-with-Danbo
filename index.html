@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Responsive Image Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        
+        <div class="container">
+            <h1>Danbo Gallery</h1>
+            <div class="image-container">
+                <div class="image filter"><img class="img" id="music" src="images/danbo_music.jpg"></div>
+                <div class="image filter"><img class="img" id="heart" src="images/danbo_heart.jpg"></div>
+                <div class="image filter"><img class="img" id="tree" src="images/danbo_tree.jpg"></div>
+                <div class="image filter"><img class="img" id="piano" src="images/danbo_piano.jpg"></div>
+                <div class="image filter"><img class="img" id="eiffel" src="images/danbo_eiffel.jpg"></div>
+                <div class="image filter"><img class="img" id="camera" src="images/danbo_camera.jpg"></div>
+            </div>
+            <p><a href="https://en.wikipedia.org/wiki/Danbo_(character)#:~:text=Danbo%20(%E3%83%80%E3%83%B3%E3%83%9C%E3%83%BC%2C%20Danb%C5%8D%2C%20%22,released%20Yen%20Press%20English%20translation." target="_blank">Who is Danbo?</a></p>
+       
+            <div class="popup-image" id="popup-image">
+                <img id="foo" src="images/danbo_music.jpg">
+                <span>&times;</span>
+            </div>
+        </div>
+
+        <script src="index.js">
+        // document.querySelectorAll('.image-container .image').forEach(image =>{
+        //     image.onclick = () => {
+        //         document.querySelector('.popup-image').style.display = 'block';
+        //         document.querySelector('.popup-image img').src = image.getAttribute('src');
+        //     }
+        // })
+        // document.querySelector('.popup-image span').onclick = () => {
+        //     document.querySelector('.popup-image').style.display = 'none';
+        // }
+        </script>
+    </body>
+</html>

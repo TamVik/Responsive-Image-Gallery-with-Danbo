@@ -1,0 +1,130 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Changa', sans-serif;
+}
+
+img {
+    max-width: 100%;
+} 
+
+.filter {
+    filter: grayscale()
+}
+
+.filter:hover {
+    filter: none;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #fff, rgb(39, 36, 36));
+}
+
+.container h1 {
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.4rem;
+    text-shadow: 0 1 1 black;
+}
+
+.container h1:hover {
+    color: #40798c;
+}
+
+.container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.container a {
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: rgb(78, 76, 76);
+}
+
+.container a:hover {
+    background-color: #40798c;
+    color: #fff;
+    border: none;
+    /* opacity: .5; */
+}
+
+
+.container .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .image-container .image {
+    height: 250px;
+    width: 350px;
+    border: 10px solid rgb(155, 155, 155);
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .image-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.container .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    filter: none;
+    display: none;
+}
+
+.container .popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgb(155, 155, 155);
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+/* max-width: 768px means 768px OR SMALLER */
+@media (max-width: 768px) {
+    .container .popup-image img {
+        width: 95%;
+    }
+}
